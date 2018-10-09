@@ -18,7 +18,7 @@ namespace Task3
             Console.WriteLine("Исходный массив:");
             FillOutArr.OutArr(arr);
 
-            Console.WriteLine($"\nСумма всех неотрицательных чисел: { Operation.SumUp(arr)}");
+            Console.WriteLine($"\nСумма всех неотрицательных чисел: { Operation.GetSumUp(arr)}");
 
             Console.ReadKey();
         }

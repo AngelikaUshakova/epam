@@ -8,9 +8,9 @@ namespace Task03Library
 {
     public static class FillOutArr
     {
+        static Random r = new Random();
         static public int[] RandomFill(int[] arr)
         {
-            Random r = new Random();
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = r.Next(-100, 100);
@@ -20,7 +20,6 @@ namespace Task03Library
 
         static public int[,] RandomFill(int[,] arr)
         {
-            Random r = new Random();
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -28,13 +27,12 @@ namespace Task03Library
                     arr[i, j] = r.Next(-100, 100);
                 }
             }
-
             return arr;
         }
 
         static public int[,,] RandomFill(int[,,] arr)
         {
-            Random r = new Random();
+         
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -45,7 +43,6 @@ namespace Task03Library
                     }
                 }
             }
-
             return arr;
         }
 
@@ -55,7 +52,6 @@ namespace Task03Library
             {
                 Console.Write($"{arr[i],5} ");
             }
-               
         }
 
         static public void OutArr(int[,] arr)
@@ -68,7 +64,6 @@ namespace Task03Library
                 }
                 Console.WriteLine();
             }
-               
         }
 
         static public void OutArr(int[,,] arr)
@@ -86,8 +81,6 @@ namespace Task03Library
                 }
                 Console.WriteLine();
             }
-                
         }
-
     }
 }

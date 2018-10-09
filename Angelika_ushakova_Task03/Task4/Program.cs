@@ -18,7 +18,7 @@ namespace Task4
             Console.WriteLine("Исходный массив:");
             FillOutArr.OutArr(arr);
 
-            Console.WriteLine($"\nСумма всех элементов, стоящих на четной позиции: { Operation.SumUp(arr)}");
+            Console.WriteLine($"\nСумма всех элементов, стоящих на четной позиции: { Operation.GetSumUp(arr)}");
 
             Console.ReadKey();
         }

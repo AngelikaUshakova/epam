@@ -18,7 +18,9 @@ namespace Task1
             Console.WriteLine("Исходный массив:");
             FillOutArr.OutArr(arr);
 
-            Operation.FindMaxMin(arr);
+            int max = Operation.GetFindMax(arr);
+            int min = Operation.GetFindMin(arr);
+            Console.WriteLine($"\n\nМаксимальный элемент: {max} \nМинимальный элемент: {min}");
 
             Operation.SortArr(arr);
             Console.WriteLine("\nОтсортированный массив:");

@@ -18,7 +18,7 @@ namespace Task2
             Console.WriteLine("Исходный массив:");
             FillOutArr.OutArr(arr);
 
-            Operation.ReplaceArr(arr);
+            Operation.ReplaceArrOnZero(arr);
             Console.WriteLine("\nМассив после замены:");
             FillOutArr.OutArr(arr);
 

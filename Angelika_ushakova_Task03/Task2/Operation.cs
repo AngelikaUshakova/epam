@@ -8,7 +8,7 @@ namespace Task2
 {
     class Operation
     {
-        public static int[,,] ReplaceArr(int[,,] arr)
+        public static int[,,] ReplaceArrOnZero(int[,,] arr)
         {
             for (int i = 0; i < arr.GetLength(0); i++)
             {

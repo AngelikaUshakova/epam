@@ -8,22 +8,31 @@ namespace Task1
 {
    static public class Operation
     {
-        static public void FindMaxMin(int[] arr)
+        static public int GetFindMax(int[] arr)
         {
-            int min = arr[0];
             int max = arr[0];
             for (int i = 1; i < arr.Length; i++)
             {
-                min = arr[i] < min ? arr[i] : min;
                 max = arr[i] > max ? arr[i] : max;
             }
-            Console.WriteLine($"\n\nМаксимальный элемент: {max} \nМинимальный элемент: {min}");
+            return max;
+        }
+
+        static public int GetFindMin(int[] arr)
+        {
+            int min = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                min = arr[i] < min ? arr[i] : min;
+            }
+            return min;
         }
 
         static public int[] SortArr(int[] arr)
         {
             int swap;
             for (int i = 0; i < arr.Length - 1; i++)
+            {
                 for (int j = i + 1; j < arr.Length; j++)
                     if (arr[i] > arr[j])
                     {
@@ -31,7 +40,7 @@ namespace Task1
                         arr[i] = arr[j];
                         arr[j] = swap;
                     }
-
+            }
             return arr;
         }
     }
