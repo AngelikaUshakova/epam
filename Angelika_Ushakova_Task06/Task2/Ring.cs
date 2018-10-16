@@ -8,24 +8,24 @@ namespace Task2
 {
     class Ring : Round
     {
-        protected double interiorRadius;
+        protected double radius2;
 
-        public Ring(Coordinates center, double radius, double interiorRadius) : base(center, radius)
+        public Ring(Coordinates center, double radius, double radius2) : base(center, radius)
         {
-            InteriorRadius = interiorRadius;
+            Radiu2 = radius2;
         }
 
-        public double InteriorRadius
+        public double Radiu2
         {
-            get => interiorRadius;
+            get => radius2;
             set
             {
-                if ((value <= 0) || (value > Radius))
+                if ((value <= 0) || (value == Radius))
                 {
                     throw new Exception("Неверное значение внутреннего радиуса");
                 }
 
-                interiorRadius = value;
+                radius2 = value;
             }
         }
 
@@ -33,7 +33,7 @@ namespace Task2
         {
             get
             {
-                return AreaCircle - Math.PI * InteriorRadius * InteriorRadius;
+                return Math.Abs(AreaCircle - Math.PI * radius2 * radius2);
             }
         }
 
@@ -41,7 +41,7 @@ namespace Task2
         {
             get
             {
-                return LengthCircle + 2 * Math.PI * InteriorRadius;
+                return LengthCircle + 2 * Math.PI * radius2;
             }
         }
     }

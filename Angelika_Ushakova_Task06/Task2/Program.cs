@@ -20,10 +20,10 @@ namespace Task2
 
             Console.WriteLine("\nВведите значение радиуса:");
             double radius = GetValue();
-            Console.WriteLine("\nВведите значение внутреннего радиуса:");
-            double interiorRadius = GetValue();
+            Console.WriteLine("\nВведите значение второго радиуса:");
+            double radius2 = GetValue();
 
-            Ring ring = new Ring(center, radius, interiorRadius);
+            Ring ring = new Ring(center, radius, radius2);
 
             Console.WriteLine($"\nДлина окружности: {ring.LengthCircle:0.0000} | " +
                               $"Площадь круга: {ring.AreaCircle:0.0000}" +
