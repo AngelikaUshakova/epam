@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task2
 {
@@ -12,10 +8,10 @@ namespace Task2
 
         public Ring(Coordinates center, double radius, double radius2) : base(center, radius)
         {
-            Radiu2 = radius2;
+            Radius2 = radius2;
         }
 
-        public double Radiu2
+        public double Radius2
         {
             get => radius2;
             set

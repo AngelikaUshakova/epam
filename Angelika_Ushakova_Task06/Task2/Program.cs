@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task2
 {
@@ -31,6 +27,7 @@ namespace Task2
                               $"Площадь кольца: {ring.AreaRing:0.0000}");
 
             Console.ReadKey();
+
         }
 
         private static double GetValue()

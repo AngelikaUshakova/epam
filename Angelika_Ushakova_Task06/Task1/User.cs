@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Task1
 {
@@ -49,7 +45,7 @@ namespace Task1
                 string patternSurname = "^([А-Я][а-я]+-[А-Я][а-я]+)|([А-Я][а-я]+)$";
                 if (!CheckFullName(patternSurname, value))
                 {
-                    throw new Exception("Некорректное значение фамилии");
+                    throw new ArgumentException("Некорректное значение фамилии");
                 }
                 else
                 {
@@ -66,7 +62,7 @@ namespace Task1
                 string patternMiddleName = @"(^([А-Я][а-я]+-[А-Я][а-я]+)|([А-Я][а-я]+))|(^)$";
                 if (!CheckFullName(patternMiddleName, value))
                 {
-                    throw new Exception("Некорректное значение отчества");
+                    throw new ArgumentException("Некорректное значение отчества");
                 }
                 else
                 {
@@ -86,7 +82,7 @@ namespace Task1
             {
                 if (value > DateTime.Now)
                 {
-                    throw new Exception("Дата позже текущей!");
+                    throw new ArgumentException ("Дата позже текущей!");
                 }
 
 
