@@ -1,6 +1,0 @@
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\ShapeLibrary\bin\Debug\ShapeLibrary.dll
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\ShapeLibrary\bin\Debug\ShapeLibrary.pdb
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\ShapeLibrary\obj\Debug\ShapeLibrary.csprojAssemblyReference.cache
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\ShapeLibrary\obj\Debug\ShapeLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\ShapeLibrary\obj\Debug\ShapeLibrary.dll
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\ShapeLibrary\obj\Debug\ShapeLibrary.pdb

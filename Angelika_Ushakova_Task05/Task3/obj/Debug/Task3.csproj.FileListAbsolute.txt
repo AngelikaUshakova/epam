@@ -1,7 +1,0 @@
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\bin\Debug\Task3.exe.config
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\bin\Debug\Task3.exe
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\bin\Debug\Task3.pdb
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\obj\Debug\Task3.exe
-C:\Users\Лика\source\repos\Angelika_Ushakova_Task05\Task3\obj\Debug\Task3.pdb
