@@ -1,0 +1,6 @@
+C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\DemoApplication\DemoApplication\bin\Debug\DemoApplication.exe
+C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\DemoApplication\DemoApplication\bin\Debug\DemoApplication.pdb
+C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csprojAssemblyReference.cache
+C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csproj.CoreCompileInputs.cache
+C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\DemoApplication\DemoApplication\obj\Debug\DemoApplication.exe
+C:\Users\Лика\source\repos\Angelika_Ushakova_Task07\DemoApplication\DemoApplication\obj\Debug\DemoApplication.pdb
