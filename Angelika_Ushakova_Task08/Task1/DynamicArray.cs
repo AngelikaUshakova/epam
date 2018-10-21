@@ -29,7 +29,7 @@ namespace Task1
         public  DynamicArray(T[] array)
         {
             Capacity = array.Length;
-            this.array = array;
+            this.array = (T[])array.Clone();
         }
 
         public int Capacity { get; private set; }
@@ -48,10 +48,7 @@ namespace Task1
             {
                 CapacityChange(2);
             }
-            else
-            {
                 array[array.Length + 1] = arrayElement;
-            }
         }
 
         private void CapacityChange(int N)
