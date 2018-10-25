@@ -11,15 +11,16 @@ namespace Task2
     {
         private T[] array;
 
-        public DynamicArray()
-        {
-            array = new T[8];
-            Capacity = 8;
-        }
-
         public DynamicArray(IEnumerable<T> array)
         {
             this.array = array.ToArray();
+            Length = this.array.Length;
+        }
+
+        public DynamicArray()
+        {
+            array = new T[8];
+            Length = 8;
         }
 
         public DynamicArray(byte N)
@@ -29,45 +30,36 @@ namespace Task2
                 throw new ArgumentException("Рзмаер массива должен быть положителным");
             }
             array = new T[N];
-            Capacity = N;
+            Length = N;
         }
 
-        public  DynamicArray(T[] array)
+        public DynamicArray(T[] array)
         {
-            Capacity = array.Length;
+            Length = array.Length;
             this.array = (T[])array.Clone();
         }
 
-        public int Capacity { get; private set; }
+        public int Length { get; private set; }
 
-        public int Length
+        public int Capacity
         {
             get
             {
                 return array.Length;
             }
-        }
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            for (int i = 0; i < array.Length; ++i)
+            private set
             {
-                yield return array[i];
+                Capacity = value;
             }
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
 
         public void Add(T arrayElement)
         {
-           if (Capacity == array.Length)
+            if (Capacity == Length)
             {
                 CapacityChange(2);
             }
-                array[array.Length + 1] = arrayElement;
+            array[Length++] = arrayElement;
         }
 
         private void CapacityChange(int N)
@@ -84,7 +76,7 @@ namespace Task2
 
         public void AddRange(T[] array)
         {
-            if (Capacity < (this.array.Length + array.Length))
+            if (Capacity < (Length + array.Length))
             {
                 CapacityChange(2 * Count(array));
             }
@@ -94,7 +86,7 @@ namespace Task2
         {
             int count = 0;
             int capacity = Capacity;
-            while(capacity < (this.array.Length + array.Length))
+            while (capacity < (Length + array.Length))
             {
                 capacity *= 2;
                 count++;
@@ -105,38 +97,53 @@ namespace Task2
         public bool Remove(T elementArray)
         {
             bool remove = false;
-            for(int i = 0; i < array.Length; i++)
+            for (int i = 0; i < Length; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(array[i],elementArray))
+                if (EqualityComparer<T>.Default.Equals(array[i], elementArray))
                 {
-                    for (int j = i; j < array.Length; j++)
+                    for (int j = i; j < Length; j++)
                     {
                         array[j] = array[j + 1];
                     }
                     remove = true;
                 }
             }
+            Length--;
             return remove;
         }
 
         public void Insert(T elementArray, int index)
         {
-           if ((index > array.Length) || (index < 0))
+            if ((index > Length) || (index < 0))
             {
                 throw new ArgumentOutOfRangeException("Выход за границу массива");
             }
 
-           if (array.Length == Capacity)
+            if (Length == Capacity)
             {
                 CapacityChange(2);
             }
-            for (int i = array.Length + 1; i > index; i--) 
+            for (int i = Length + 1; i > index; i--)
             {
-                array[i] = array[i-1];
+                array[i] = array[i - 1];
             }
+            Length++;
             array[index] = elementArray;
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < array.Length; ++i)
+            {
+                yield return array[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+       
         public T this[int index]
         {
             get

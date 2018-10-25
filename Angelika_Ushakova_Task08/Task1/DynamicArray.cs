@@ -13,7 +13,7 @@ namespace Task1
         public DynamicArray()
         {
             array = new T[8];
-            Capacity = 8;
+            Length = 8;
         }
 
         public DynamicArray(byte N)
@@ -23,32 +23,36 @@ namespace Task1
                 throw new ArgumentException("Рзмаер массива должен быть положителным");
             }
             array = new T[N];
-            Capacity = N;
+            Length = N;
         }
 
         public  DynamicArray(T[] array)
         {
-            Capacity = array.Length;
+            Length = array.Length;
             this.array = (T[])array.Clone();
         }
 
-        public int Capacity { get; private set; }
+        public int Length { get; private set; }
 
-        public int Length
+        public int Capacity
         {
             get
             {
                 return array.Length;
             }
+           private set
+            {
+                Capacity = value;
+            }
         }
 
         public void Add(T arrayElement)
         {
-           if (Capacity == array.Length)
+           if (Capacity == Length)
             {
                 CapacityChange(2);
             }
-                array[array.Length + 1] = arrayElement;
+                array[Length++] = arrayElement;
         }
 
         private void CapacityChange(int N)
@@ -65,7 +69,7 @@ namespace Task1
 
         public void AddRange(T[] array)
         {
-            if (Capacity < (this.array.Length + array.Length))
+            if (Capacity < (Length + array.Length))
             {
                 CapacityChange(2 * Count(array));
             }
@@ -75,7 +79,7 @@ namespace Task1
         {
             int count = 0;
             int capacity = Capacity;
-            while(capacity < (this.array.Length + array.Length))
+            while(capacity < (Length + array.Length))
             {
                 capacity *= 2;
                 count++;
@@ -86,35 +90,38 @@ namespace Task1
         public bool Remove(T elementArray)
         {
             bool remove = false;
-            for(int i = 0; i < array.Length; i++)
+            for(int i = 0; i < Length; i++)
             {
                 if (EqualityComparer<T>.Default.Equals(array[i],elementArray))
                 {
-                    for (int j = i; j < array.Length; j++)
+                    for (int j = i; j < Length; j++)
                     {
                         array[j] = array[j + 1];
                     }
                     remove = true;
                 }
             }
+            Length--;
             return remove;
         }
 
         public void Insert(T elementArray, int index)
         {
-           if ((index > array.Length) || (index < 0))
+           if ((index > Length) || (index < 0))
             {
                 throw new ArgumentOutOfRangeException("Выход за границу массива");
             }
 
-           if (array.Length == Capacity)
+           if (Length == Capacity)
             {
                 CapacityChange(2);
             }
-            for (int i = array.Length + 1; i > index; i--) 
+            for (int i = Length + 1; i > index; i--) 
             {
                 array[i] = array[i-1];
             }
+
+            Length++;
             array[index] = elementArray;
         }
 
@@ -134,7 +141,7 @@ namespace Task1
 
         private void Correctness(int index)
         {
-            if ((index < 0) && (index > array.Length))
+            if ((index < 0) && (index > Length))
             {
                 throw new IndexOutOfRangeException("Некорректный индекс. Выход за границы массива");
             }
