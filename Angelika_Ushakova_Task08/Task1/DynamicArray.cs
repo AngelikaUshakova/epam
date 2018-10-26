@@ -48,11 +48,7 @@ namespace Task1
 
         public void Add(T arrayElement)
         {
-           if (Capacity == Length)
-            {
-                CapacityChange(2);
-            }
-                array[Length++] = arrayElement;
+            Insert(arrayElement, 1);
         }
 
         private void CapacityChange(int N)
