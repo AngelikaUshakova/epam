@@ -11,7 +11,7 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-            const int N1 = 2, N2=3;
+            const int N1 = 2, N2 = 3;
             int[,] arr = new int[N1,N2];
 
             FillOutArr.RandomFill(arr);

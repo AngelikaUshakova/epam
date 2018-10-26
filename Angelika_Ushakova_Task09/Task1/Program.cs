@@ -27,12 +27,12 @@ namespace Task1
         static void Main(string[] args)
         {
             List<int> list = new List<int>() {1,2,3,4,5};
-            List<int> linklist = new List<int>() { 1, 4, 3, 4, 8, 2, 4, 9 };
+            List<int> linklist = new List<int>() { 1, 4, 3, 4, 8, 2, 4, 9};
 
             LinkedList<int> linkedList = new LinkedList<int>(linklist);
 
             Console.WriteLine(RemoveEachSecondItem(list));
-          //  Console.WriteLine(RemoveEachSecondItem(linkedList));
+            Console.WriteLine(RemoveEachSecondItem(linkedList));
 
             Console.ReadKey();
         }

@@ -16,7 +16,7 @@ namespace Task1
         {
             for (int i = 0; i < shape.Length; i++)
             {
-                shape[i].Draw(iprinter);
+                shape[i].Draw();
             }
             Console.ReadKey();
         }

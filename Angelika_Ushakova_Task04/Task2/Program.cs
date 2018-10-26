@@ -15,10 +15,7 @@ namespace Task2
             Console.WriteLine("\nВведите вторую строку:");
             string str2 = Console.ReadLine();
 
-            str1.ToLower();
-            str2.ToLower();
-
-            Console.WriteLine($"Новая строка: {Operation.GetReplaceStr(str1, str2)}");
+            Console.WriteLine($"Новая строка: {Operation.GetReplaceStr(str1.ToLower(), str2.ToLower())}");
             Console.ReadKey();
         }
     }

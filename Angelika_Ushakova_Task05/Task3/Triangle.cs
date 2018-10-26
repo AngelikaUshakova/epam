@@ -108,9 +108,8 @@ namespace Task3
 
         public double GetAr()
         {
-            double perimetr = GetPerimetr();
-            return Math.Sqrt(perimetr * (perimetr - sides.A) * (perimetr - sides.B) * (perimetr - sides.C));
+            double semiPerimetr = GetPerimetr()/2;
+            return Math.Sqrt(semiPerimetr * (semiPerimetr - sides.A) * (semiPerimetr - sides.B) * (semiPerimetr - sides.C));
         }
-        
     }
 }

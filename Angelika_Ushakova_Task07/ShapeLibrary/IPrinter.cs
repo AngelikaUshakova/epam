@@ -9,6 +9,5 @@ namespace ShapeLibrary
     interface IPrinter
     {
         void Print(int x, int y);
-
     }
 }

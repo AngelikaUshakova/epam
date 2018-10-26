@@ -15,10 +15,10 @@ namespace Task3
             Console.WriteLine();
 
             int count = n - 1;
-            Console.WriteLine(new string(' ', count) + new string('*', 1));
-            for (int i = 3; i < n*2; i+=2)
+
+            for (int i = 1; i < n*2; i+=2)
             {
-                Console.WriteLine(new string(' ', --count) + new string('*', i));
+                Console.WriteLine(new string(' ', count--) + new string('*', i));
             }
             Console.ReadKey();
         }

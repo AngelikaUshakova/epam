@@ -107,12 +107,9 @@ namespace Task1
 
         public void Insert(T elementArray, int index)
         {
-           if ((index > Length) || (index < 0))
-            {
-                throw new ArgumentOutOfRangeException("Выход за границу массива");
-            }
+            CheckCorrectness(index);
 
-           if (Length == Capacity)
+            if (Length == Capacity)
             {
                 CapacityChange(2);
             }
@@ -129,17 +126,17 @@ namespace Task1
         {
             get
             {
-                Correctness(index);
+                CheckCorrectness(index);
                 return array[index];
             }
             set
             {
-                Correctness(index);
+                CheckCorrectness(index);
                 array[index] = value;
             }
         }
 
-        private void Correctness(int index)
+        private void CheckCorrectness(int index)
         {
             if ((index < 0) && (index > Length))
             {

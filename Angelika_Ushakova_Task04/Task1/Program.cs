@@ -14,7 +14,7 @@ namespace Task1
             Console.WriteLine("Введите строку:");
             string str = Console.ReadLine();
 
-            string patternWord = "\\b[а-яА-Я]+\\b";
+            string patternWord = @"\w+";
 
             int sum = 0;
 

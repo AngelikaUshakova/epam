@@ -10,10 +10,11 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            Sides b = new Sides(0,5,6);
+            Sides sides = new Sides(3,5,6);
             
-            Triangle a = new Triangle(b);
-            Console.WriteLine($"{a.Sides.A} | {a.Sides.B} | {a.Sides.C} | {a.Area:0.00} | {a.Perimeter:0.00}");
+            Triangle triangle = new Triangle(sides);
+            Console.WriteLine($"{triangle.Sides.A} | {triangle.Sides.B} | {triangle.Sides.C}" +
+                              $" | {triangle.Area:0.00} | {triangle.Perimeter:0.00}");
 
             Console.ReadKey();
         }

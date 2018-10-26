@@ -23,7 +23,8 @@ namespace Task3
             List<KeyValuePair<string, float>> wordsCount = new List<KeyValuePair<string, float>>();
             foreach ( string word in wordsSet)
             {
-                wordsCount.Add(new KeyValuePair<string, float>(word, Regex.Split(text.ToLower(), word).Count()-1)); 
+                int count = Regex.Split(text.ToLower(), word).Count() - 1;
+                wordsCount.Add(new KeyValuePair<string, float>(word, count)); 
             }
             for (int i = 0; i < wordsCount.Count; i++)
             {

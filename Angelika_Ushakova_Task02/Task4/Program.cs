@@ -17,10 +17,9 @@ namespace Task4
             for (int i = 1; i < n+1; i++)
             {
                 int count = n-1;
-                Console.WriteLine(new string(' ', count) + new string('*', 1));
-                for (int j = 3; j < i * 2; j += 2)
+                for (int j = 1; j < i * 2; j += 2)
                 {
-                    Console.WriteLine(new string(' ', --count) + new string('*', j));
+                    Console.WriteLine(new string(' ', count--) + new string('*', j));
                 }
             }
             Console.ReadKey();
